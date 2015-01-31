@@ -69,7 +69,7 @@ Class URLHandler{
 		$url_regex = $regex;
 		if (preg_match_all("~\{\s*(.*?)\s*\}~", $regex, $arr)){
   			foreach($arr[0] as $p){
-  				$url_regex = str_replace($p, '([a-zA-Z0-9_\+\-%]+)', $url_regex);
+  				$url_regex = str_replace($p, '([a-zA-Z0-9._\+\-%]+)', $url_regex);
   			}
 		}
 		$route =  '/'.$url_regex.'/?';
